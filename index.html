@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>HCI (CS-555) Week 05 Assignment</title>
 
+  <!-- Minimal CSS only -->
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 24px;
       line-height: 1.6;
     }
 
-    header h1 {
-      margin-bottom: 6px;
-    }
-
     nav ul {
-      list-style-type: disc;
       padding-left: 20px;
     }
 
     section {
       margin-top: 20px;
-      padding: 12px;
-      background-color: #f0f0f0;
-    }
-
-    .highlight {
-      background-color: #eaf4ff;
     }
   </style>
 </head>
@@ -36,14 +26,14 @@
 
   <header>
     <h1>HCI (CS-555) Week 05 Assignment</h1>
-    <p>Student portfolio: semantic HTML + HCI concepts (Norman, GOMS, KLM)</p>
+    <p>Student portfolio: Semantic HTML and HCI concepts</p>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="/index.html">Home</a></li>
-       <li><a href="/modals.html">Interaction Modals</a></li>
-       <li><a href="/analysis.html">Parallel Analysis</a></li>
-       <li><a href="/practice.html">Lab Practice</a></li>
+        <li><a href="/modals.html">Interaction Models</a></li>
+        <li><a href="/analysis.html">Parallel Analysis</a></li>
+        <li><a href="/practice.html">Lab Practice</a></li>
       </ul>
     </nav>
   </header>
@@ -51,133 +41,96 @@
   <main>
 
     <section>
-      <h2>About Me (Course context)</h2>
+      <h2>About Me (Course Context)</h2>
       <p>
-        My name is <strong>Nabeeha Fatima</strong>, 
-        and this website serves as my submission for<strong> Week 05 of CS-555 Human–Computer Interaction.</strong>
-        Its purpose is to showcase well-structured semantic HTML with minimal CSS, as well as to explain 
-        HCI concepts based on the course textbook.
+        My name is <strong>Nabeeha Fatima</strong>. This website is my submission for
+        <strong>Week 05 of CS-555 Human–Computer Interaction</strong>.
+        It demonstrates semantic HTML structure and explains key HCI concepts
+        based on the course textbook.
       </p>
     </section>
 
-    <section class="highlight">
-      <h2>What is HCI? (Page# 3–4)</h2>
+    <section>
+      <h2>What is HCI?</h2>
       <p>
-       <strong>HCI (Human–Computer Interaction)</strong> is about understanding how people use computers,creating technology that fits human needs,
-       improving the experience of users and making interfaces that are intuitive and accessible
+        <strong>Human–Computer Interaction (HCI)</strong> focuses on how people interact
+        with computers and how systems can be designed to be intuitive, efficient,
+        and accessible for users.
       </p>
-      <section>
-  <h2>Chunking</h2>
+    </section>
 
-  <p>
-    <strong>Definition:</strong><br>
-    Chunking is the process of grouping information into smaller, meaningful units to improve
-    memory and understanding.
-  </p>
+    <section>
+      <h2>Chunking</h2>
 
-  <p>
-    <strong>Role in HCI:</strong><br>
-    Chunking helps users:
-  </p>
+      <p>
+        <strong>Definition:</strong><br>
+        Chunking is the grouping of information into smaller, meaningful units
+        to improve memory and understanding.
+      </p>
 
-  <ul>
-    <li>Remember information easily</li>
-    <li>Process complex data efficiently</li>
-  </ul>
+      <p><strong>Role in HCI:</strong></p>
+      <ul>
+        <li>Improves recall</li>
+        <li>Reduces cognitive load</li>
+      </ul>
 
-  <p>
-    <strong>Examples:</strong>
-  </p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Phone number: <code>0301-123-4567</code></li>
+        <li>Menus divided into categories</li>
+      </ul>
+    </section>
 
-  <ul>
-    <li>Phone number: <code>0301-123-4567</code> instead of <code>03011234567</code></li>
-    <li>Grouped menu categories instead of one long menu</li>
-  </ul>
+    <section>
+      <h2>Short-Term Memory (STM) in HCI</h2>
 
-  <p>
-    <strong>Benefit:</strong><br>
-    Chunking reduces cognitive load on users.
-  </p>
-  <section>
-  <h2>Short-Term Memory (STM) in HCI</h2>
+      <p>
+        <strong>Definition:</strong><br>
+        Short-term memory temporarily holds information currently in use.
+      </p>
 
-  <p>
-    <strong>Definition:</strong><br>
-    Short-term memory temporarily stores information that is currently being used.
-  </p>
+      <ul>
+        <li>Capacity: 5–9 items</li>
+        <li>Duration: 15–30 seconds</li>
+        <li>Easily overloaded</li>
+      </ul>
 
-  <p>
-    <strong>Characteristics:</strong>
-  </p>
+      <p>
+        <strong>Design Implication:</strong><br>
+        Interfaces should minimize memory load by keeping information visible
+        and providing feedback.
+      </p>
+    </section>
 
-  <ul>
-    <li>Limited capacity (5–9 items)</li>
-    <li>Short duration (15–30 seconds)</li>
-    <li>Easily overloaded</li>
-  </ul>
+    <section>
+      <h2>Fitts’s Law</h2>
 
-  <p>
-    <strong>Importance in HCI Design:</strong>
-  </p>
+      <p>
+        <strong>Definition:</strong><br>
+        Fitts’s Law predicts the time required to move to a target.
+      </p>
 
-  <ul>
-    <li>Interfaces should not rely heavily on user memory</li>
-    <li>Important information should be visible on the screen</li>
-    <li>Systems should provide feedback and reminders</li>
-  </ul>
+      <ul>
+        <li>Larger targets are easier to select</li>
+        <li>Closer targets require less time</li>
+      </ul>
 
-  <p>
-    <strong>Example:</strong><br>
-    Auto-filled forms reduce the need for users to remember previous information.
-  </p>
-</section>
+      <p>
+        <strong>Example:</strong><br>
+        A large, nearby “Submit” button is faster to click than a small one far away.
+      </p>
+    </section>
 
-<section>
-  <h2>Fitts’s Law</h2>
+  </main>
 
-  <p>
-    <strong>Definition:</strong><br>
-    Fitts’s Law predicts the time required to move to a target, such as clicking a button on a screen.
-  </p>
-
-  <p>
-    <strong>Statement:</strong><br>
-    The time to reach a target depends on:
-  </p>
-
-  <ul>
-    <li>The distance to the target</li>
-    <li>The size of the target</li>
-  </ul>
-
-  <p>
-    👉 <strong>Larger and closer objects are faster and easier to select.</strong>
-  </p>
-
-  <p>
-    <strong>Importance in HCI:</strong>
-  </p>
-
-  <ul>
-    <li>Used in designing buttons, icons, and menus</li>
-    <li>Important for touch screens and mouse-based interfaces</li>
-  </ul>
-
-  <p>
-    <strong>Example:</strong><br>
-    A large “Submit” button is easier to click than a small one.<br>
-    Buttons placed closer to the cursor are faster to select.
-  </p>
-   </section>
-</main>
-<footer class="site-footer">
-    <h3>Book Reference (Dix et al.)</h3>
+  <footer>
+    <h3>Book Reference</h3>
     <p>
-        Dix, A., Finlay, J., Abowd, G. D., &amp; Beale, R.
-        <em>Human–Computer Interaction.</em>
+      Dix, A., Finlay, J., Abowd, G. D., &amp; Beale, R.
+      <em>Human–Computer Interaction</em>.
     </p>
     <p>© CS-555 HCI – Week 05 Submission</p>
-</footer>
+  </footer>
 
 </body>
 </html>
