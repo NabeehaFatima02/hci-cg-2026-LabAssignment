@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab Exam Practice – HTML Foundations</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 24px;
+      line-height: 1.6;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+
+    section {
+      background-color: #eaf4ff;
+      padding: 16px;
+      margin-bottom: 24px;
+      border-radius: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      text-align: left;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0056b3;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Lab Exam Practice (HTML Foundations)</h1>
+</header>
+
+<!-- ===================== PART A ===================== -->
+<section>
+  <h2>Part A: Find Mistakes (Identify + Fix)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>UI Element / Issue</th>
+        <th>Wrong HTML (with mistake)</th>
+        <th>Correct UI Element</th>
+        <th>Correct HTML</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>Navigation links not wrapped in &lt;li&gt;</strong></td>
+        <td>
+          <code>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;a href="home.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+          </code>
+        </td>
+        <td>Navigation list with proper list items</td>
+        <td>
+          <code>
+&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+          </code>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Label not associated with form control</strong></td>
+        <td>
+          <code>
+&lt;label&gt;Email&lt;/label&gt;
+&lt;input type="email" name="email"&gt;
+          </code>
+        </td>
+        <td>Label correctly linked to input</td>
+        <td>
+          <code>
+&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+          </code>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Incorrect heading hierarchy</strong></td>
+        <td>
+          <code>
+&lt;h1&gt;User Research&lt;/h1&gt;
+&lt;h3&gt;Interview Findings&lt;/h3&gt;
+          </code>
+        </td>
+        <td>Proper heading order</td>
+        <td>
+          <code>
+&lt;h1&gt;User Research&lt;/h1&gt;
+&lt;h2&gt;Interview Findings&lt;/h2&gt;
+          </code>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Table missing caption and headers</strong></td>
+        <td>
+          <code>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Model&lt;/td&gt;
+    &lt;td&gt;Purpose&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+          </code>
+        </td>
+        <td>Accessible table with caption and headers</td>
+        <td>
+          <code>
+&lt;table&gt;
+  &lt;caption&gt;HCI Models Overview&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Model&lt;/th&gt;
+      &lt;th scope="col"&gt;Purpose&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+&lt;/table&gt;
+          </code>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>aria-current used on multiple links</strong></td>
+        <td>
+          <code>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a aria-current="page"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+          </code>
+        </td>
+        <td>Only active page marked as current</td>
+        <td>
+          <code>
+&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="home.html" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+          </code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== PART B ===================== -->
+<section>
+  <h2>Part B: True / False — Answers</h2>
+
+  <ul>
+    <li><strong>Every link inside &lt;ul&gt; must be placed inside an &lt;li&gt;.</strong><br>✅ True</li>
+
+    <li><strong>A page may have multiple &lt;h1&gt; headings to make text larger.</strong><br>
+      ❌ False<br>
+      <em>(&lt;h1&gt; is for structure, not styling.)</em>
+    </li>
+
+    <li><strong>aria-current="page" should be used on the active navigation item.</strong><br>✅ True</li>
+
+    <li><strong>A form is accessible even if it has no &lt;label&gt; elements.</strong><br>
+      ❌ False<br>
+      <em>(Labels are important for accessibility.)</em>
+    </li>
+
+    <li><strong>KLM predicts execution time for expert, error-free performance.</strong><br>✅ True</li>
+  </ul>
+</section>
+
+<!-- ===================== PART C ===================== -->
+<section>
+  <h2>Part C: Short Answer — Answers</h2>
+
+  <p><strong>Q1) Difference between a semantic element and a generic element</strong></p>
+
+  <p>
+    <strong>Semantic element</strong> (e.g., <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>):<br>
+    These elements clearly describe their meaning and purpose. They improve accessibility, SEO,
+    and help screen readers understand the page structure.<br>
+    <strong>Example:</strong> <code>&lt;nav&gt;</code> tells that the content is for navigation.
+  </p>
+
+  <p>
+    <strong>Generic element</strong> (e.g., <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>):<br>
+    These have no inherent meaning. They are mainly used for styling or layout purposes when no
+    semantic element fits.<br>
+    <strong>Example:</strong> <code>&lt;div&gt;</code> just groups content without explaining what it is.
+  </p>
+
+  <p><strong>Q2) Why does KLM not model high-level planning and interpretation?</strong></p>
+
+  <p>
+    KLM (Keystroke-Level Model) focuses only on low-level physical actions like keystrokes,
+    mouse movements, and mental preparation time.
+  </p>
+
+  <p>
+    It assumes the user is already skilled and knows what to do, so it does not include thinking,
+    decision-making, or understanding tasks.
+  </p>
+
+  <p>
+    High-level planning and interpretation vary from user to user, so KLM ignores them to keep
+    predictions simple and consistent.
+  </p>
+</section>
+
+<!-- ===================== BACK TO HOME ===================== -->
+<div class="back-link">
+  <a href="index.html">← Back to Home</a>
+</div>
+
+</body>
+</html>
